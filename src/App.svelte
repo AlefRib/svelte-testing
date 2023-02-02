@@ -1,7 +1,6 @@
 <script lang="ts">
   import logo from './assets/svelte.png'
-  import menu from './assets/hamburguer-menu.svg'
-  import Counter from './lib/Counter.svelte'
+  import PageTitle from './components/PageTitle.svelte'
 </script>
 
 <main class="text-center mx-0">
@@ -21,6 +20,7 @@
       </button>
     </div>
   </div>
+  <PageTitle title="Quer Ajudar" subtitle="E você?" />
 </main>
 
 <style lang="postcss">
