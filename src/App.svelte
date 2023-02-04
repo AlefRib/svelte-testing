@@ -1,6 +1,15 @@
 <script lang="ts">
+  import Dog1 from '../src/assets/images/dog1.png'
+  import Dog2 from '../src/assets/images/dog2.png'
+  import { writable } from 'svelte/store'
   import logo from './assets/svelte.png'
+  import Card from './components/Card.svelte';
   import PageTitle from './components/PageTitle.svelte'
+
+  const cardHome = writable([
+		{title:'Test1',cardTitle:'Title1',cardDescription:'description',image:Dog1, imageAlt:'Imagem teste',color:'bg-cyan-500',route:'/adotar'},
+    {title:'Test2',cardTitle:'Title2',cardDescription:'description2',image:Dog2, imageAlt:'Imag em teste',color:'bg-cyan-500',route:'/adotar1'}
+	])
 </script>
 
 <main class="text-center mx-0">
@@ -21,6 +30,12 @@
     </div>
   </div>
   <PageTitle title="Quer Ajudar" subtitle="E você?" />
+  <div class="flex justify-center items-center gap-x-4">
+
+    {#each $cardHome as card}
+      <Card cardInfo={card}></Card>
+    {/each}	
+  </div>
 </main>
 
 <style lang="postcss">
