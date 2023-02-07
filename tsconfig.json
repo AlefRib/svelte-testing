@@ -26,7 +26,8 @@
      * of JS in `.svelte` files.
      */
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "strict": true
   },
   /**
    * Use globals.d.ts instead of compilerOptions.types
